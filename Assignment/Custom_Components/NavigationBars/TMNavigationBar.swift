@@ -40,6 +40,7 @@ class TMNavigationBar: UIView,NavigationBar {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.backgroundColor = UIColor.clear
         backImageView.tintColor = barThemeColor
         titleLabel.textColor = barThemeColor
         navigationBarContainer.setConstantHeight(height: 44.0)

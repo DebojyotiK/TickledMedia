@@ -1,2 +1,4 @@
 github "Alamofire/Alamofire" "4.7.3"
+github "Hearst-DD/ObjectMapper" "3.4.0"
 github "SDWebImage/SDWebImage" "4.4.2"
+github "tristanhimmelman/AlamofireObjectMapper" "5.1.0"

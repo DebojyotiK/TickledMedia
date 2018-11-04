@@ -9,8 +9,7 @@
 import UIKit
 
 @IBDesignable
-class NavigationBarDefault: UIView,NavigationBar {
-    
+class TMNavigationBar: UIView,NavigationBar {
     
     var backButton: UIControl{
         get{
@@ -22,7 +21,7 @@ class NavigationBarDefault: UIView,NavigationBar {
     @IBOutlet private var titleLabel: UILabel!
     @IBOutlet private var _backButton: UIControl!
     @IBOutlet private weak var backImageView: UIImageView!
-    private let barThemeColor = UIColor.init(red: 0.8, green: 0.8, blue: 0.8, alpha: 1)
+    private let barThemeColor = UIColor.init(red: 0.5, green: 0.5, blue: 0.5, alpha: 1)
     
     @IBInspectable
     var title:String?{
@@ -42,12 +41,12 @@ class NavigationBarDefault: UIView,NavigationBar {
     override func awakeFromNib() {
         super.awakeFromNib()
         backImageView.tintColor = barThemeColor
-        titleLabel.tintColor = barThemeColor
+        titleLabel.textColor = barThemeColor
         navigationBarContainer.setConstantHeight(height: 44.0)
     }
     
     override func awakeAfter(using aDecoder: NSCoder) -> Any? {
-        return initWith(bundle: Bundle.main, nibName: "TMNavigatonBar", index: 0)
+        return initWith(bundle: Bundle.main, nibName: "TMNavigationBar", index: 0)
     }
 }
 

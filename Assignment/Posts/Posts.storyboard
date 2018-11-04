@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-AW-LSq" customClass="NavigationBarDefault" customModule="Assignment" customModuleProvider="target">
+                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="375" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="dTY-AW-LSq" customClass="TMNavigationBar" customModule="Assignment" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                 <color key="backgroundColor" red="0.97197494449999999" green="0.0" blue="0.27860918579999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <userDefinedRuntimeAttributes>
@@ -48,7 +48,7 @@
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="postCell" rowHeight="234" id="jKJ-BW-K9T">
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="postCell" rowHeight="234" id="jKJ-BW-K9T" customClass="PostCell" customModule="Assignment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="234"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jKJ-BW-K9T" id="ppe-dB-I6Q">
@@ -56,7 +56,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-vI-h0y" customClass="PostDescriptionView" customModule="Assignment" customModuleProvider="target">
-                                                            <rect key="frame" x="12" y="12" width="351" height="209.5"/>
+                                                            <rect key="frame" x="12" y="12" width="351" height="210"/>
                                                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
                                                     </subviews>
@@ -69,8 +69,15 @@
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="postDescriptionView" destination="zSN-vI-h0y" id="46v-a6-Rf4"/>
+                                                </connections>
                                             </tableViewCell>
                                         </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="Y3P-Is-VIu" id="qbu-UV-2yv"/>
+                                            <outlet property="delegate" destination="Y3P-Is-VIu" id="ECF-Wc-iyG"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -95,7 +102,9 @@
                         <viewLayoutGuide key="safeArea" id="57A-oB-MDl"/>
                     </view>
                     <connections>
+                        <outlet property="contentView" destination="cKF-Dv-04x" id="L27-yE-akN"/>
                         <outlet property="navigationBar" destination="dTY-AW-LSq" id="Suv-IX-YFa"/>
+                        <outlet property="postsTableView" destination="vnX-kH-GPK" id="W3H-W4-dW1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xn9-Ww-NXv" userLabel="First Responder" sceneMemberID="firstResponder"/>

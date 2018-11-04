@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        startApp()
         return true
     }
 
@@ -41,6 +41,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    func startApp() {
+        
+        let postsViewModel = PostViewModel()
+        let postsVC = ViewControllerFactory.postsVC()
+        postsVC.viewModel = postsViewModel
+        let postCommentsVC = ViewControllerFactory.postCommentsVC()
+        postCommentsVC.viewModel = postsViewModel
+        
+        let navigationController = UINavigationController.init(rootViewController: postsVC)
+        navigationController.isNavigationBarHidden = true
+        self.window?.rootViewController = navigationController
+        
+    }
 
 }
 

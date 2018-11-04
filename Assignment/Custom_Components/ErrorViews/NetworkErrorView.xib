@@ -61,9 +61,6 @@
                 <constraint firstItem="O3N-Yw-bHC" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="40" id="Xqo-mD-30p"/>
                 <constraint firstAttribute="trailing" secondItem="O3N-Yw-bHC" secondAttribute="trailing" constant="40" id="ohb-GB-tZN"/>
             </constraints>
-            <connections>
-                <outlet property="tryAgainButton" destination="RIu-VU-gLt" id="fE0-ey-jdM"/>
-            </connections>
             <point key="canvasLocation" x="53.600000000000001" y="132.68365817091455"/>
         </view>
     </objects>

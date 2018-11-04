@@ -11,6 +11,7 @@ import UIKit
 class PostCommentsVC: BaseViewController {
 
     @IBOutlet private weak var countLabel: UILabel!
+    var viewModel:PostViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()

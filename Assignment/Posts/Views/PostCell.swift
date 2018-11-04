@@ -1,5 +1,5 @@
 //
-//  PostDescriptionView.swift
+//  PostCell.swift
 //  Assignment
 //
 //  Created by Debojyoti Karmakar on 04/11/18.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class PostDescriptionView: UIView {
+class PostCell: UITableViewCell {
+
+    @IBOutlet weak var postDescriptionView: PostDescriptionView!
     
     func setData(post:UserPostEntity) {
+        postDescriptionView.setData(post: post)
     }
 }

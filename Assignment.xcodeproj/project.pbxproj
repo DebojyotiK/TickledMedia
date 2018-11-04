@@ -33,11 +33,14 @@
 		33A040B1218F4E12001E4054 /* PostDescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040B0218F4E12001E4054 /* PostDescriptionView.swift */; };
 		33A040B5218F4EF1001E4054 /* UserPostEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040B4218F4EF1001E4054 /* UserPostEntity.swift */; };
 		33A040B7218F4F00001E4054 /* CommentEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040B6218F4EFF001E4054 /* CommentEntity.swift */; };
-		33A040B9218F5120001E4054 /* TMNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A040B8218F5120001E4054 /* TMNavigationBar.xib */; };
 		33A040BB218F516A001E4054 /* TMNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040BA218F516A001E4054 /* TMNavigationBar.swift */; };
 		33A040BD218F5B0E001E4054 /* PostsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040BC218F5B0E001E4054 /* PostsVC.swift */; };
 		33A040BF218F5B39001E4054 /* PostCommentsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040BE218F5B39001E4054 /* PostCommentsVC.swift */; };
 		33A040C1218F5B79001E4054 /* ViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040C0218F5B79001E4054 /* ViewControllerFactory.swift */; };
+		33A040C4218F617F001E4054 /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040C3218F617F001E4054 /* PostViewModel.swift */; };
+		33A040C6218F6277001E4054 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040C5218F6277001E4054 /* Constants.swift */; };
+		33A040C8218F6B4E001E4054 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040C7218F6B4E001E4054 /* PostCell.swift */; };
+		33A040C9218F779A001E4054 /* TMNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A040B8218F5120001E4054 /* TMNavigationBar.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +77,9 @@
 		33A040BC218F5B0E001E4054 /* PostsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsVC.swift; sourceTree = "<group>"; };
 		33A040BE218F5B39001E4054 /* PostCommentsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCommentsVC.swift; sourceTree = "<group>"; };
 		33A040C0218F5B79001E4054 /* ViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactory.swift; sourceTree = "<group>"; };
+		33A040C3218F617F001E4054 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		33A040C5218F6277001E4054 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		33A040C7218F6B4E001E4054 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +128,7 @@
 				33A04078218F2D94001E4054 /* Assets.xcassets */,
 				33A0407A218F2D94001E4054 /* LaunchScreen.storyboard */,
 				33A0407D218F2D94001E4054 /* Info.plist */,
+				33A040C5218F6277001E4054 /* Constants.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";
@@ -189,6 +196,7 @@
 		33A040A6218F4AF9001E4054 /* Posts */ = {
 			isa = PBXGroup;
 			children = (
+				33A040C2218F6132001E4054 /* ViewModels */,
 				33A040B3218F4ECA001E4054 /* Models */,
 				33A040B2218F4EBC001E4054 /* Views */,
 				33A040A7218F4B24001E4054 /* Posts.storyboard */,
@@ -213,6 +221,7 @@
 			children = (
 				33A040AE218F4DEF001E4054 /* PostDescriptionView.xib */,
 				33A040B0218F4E12001E4054 /* PostDescriptionView.swift */,
+				33A040C7218F6B4E001E4054 /* PostCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -224,6 +233,14 @@
 				33A040B6218F4EFF001E4054 /* CommentEntity.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		33A040C2218F6132001E4054 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				33A040C3218F617F001E4054 /* PostViewModel.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -286,8 +303,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A040A3218F491B001E4054 /* NetworkErrorView.xib in Resources */,
+				33A040C9218F779A001E4054 /* TMNavigationBar.xib in Resources */,
 				33A040A8218F4B24001E4054 /* Posts.storyboard in Resources */,
-				33A040B9218F5120001E4054 /* TMNavigationBar.xib in Resources */,
 				33A0407C218F2D94001E4054 /* LaunchScreen.storyboard in Resources */,
 				33A040AF218F4DEF001E4054 /* PostDescriptionView.xib in Resources */,
 				33A04079218F2D94001E4054 /* Assets.xcassets in Resources */,
@@ -327,6 +344,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				33A040AD218F4C46001E4054 /* BaseViewController.swift in Sources */,
+				33A040C6218F6277001E4054 /* Constants.swift in Sources */,
 				33A040C1218F5B79001E4054 /* ViewControllerFactory.swift in Sources */,
 				33A040B1218F4E12001E4054 /* PostDescriptionView.swift in Sources */,
 				33A040BD218F5B0E001E4054 /* PostsVC.swift in Sources */,
@@ -341,10 +359,12 @@
 				33A040A1218F40CA001E4054 /* ErrorView.swift in Sources */,
 				33A0409B218F3B17001E4054 /* UIViewUtilities.swift in Sources */,
 				33A04098218F3AA7001E4054 /* PlaceholderView.swift in Sources */,
+				33A040C4218F617F001E4054 /* PostViewModel.swift in Sources */,
 				33A04072218F2D92001E4054 /* AppDelegate.swift in Sources */,
 				33A0409F218F40A8001E4054 /* Loader.swift in Sources */,
 				33A040B7218F4F00001E4054 /* CommentEntity.swift in Sources */,
 				33A040AB218F4C15001E4054 /* NavigationBar.swift in Sources */,
+				33A040C8218F6B4E001E4054 /* PostCell.swift in Sources */,
 				33A040BF218F5B39001E4054 /* PostCommentsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

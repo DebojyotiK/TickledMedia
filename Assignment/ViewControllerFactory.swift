@@ -13,10 +13,10 @@ class ViewControllerFactory: NSObject {
     private static var Posts = UIStoryboard.init(name: "Posts", bundle: nil)
     
     class func postsVC() -> PostsVC{
-        return Posts.instantiateViewController(withIdentifier: "postsVC") as! PostsVC
+        return Posts.instantiateViewController(withIdentifier: "PostsVC") as! PostsVC
     }
     
     class func postCommentsVC() -> PostCommentsVC{
-        return Posts.instantiateViewController(withIdentifier: "postCommentsVC") as! PostCommentsVC
+        return Posts.instantiateViewController(withIdentifier: "PostCommentsVC") as! PostCommentsVC
     }
 }

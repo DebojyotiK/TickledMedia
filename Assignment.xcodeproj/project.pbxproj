@@ -22,6 +22,8 @@
 		33A04096218F3A77001E4054 /* ContainerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A04095218F3A77001E4054 /* ContainerView.swift */; };
 		33A04098218F3AA7001E4054 /* PlaceholderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A04097218F3AA7001E4054 /* PlaceholderView.swift */; };
 		33A0409B218F3B17001E4054 /* UIViewUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A0409A218F3B17001E4054 /* UIViewUtilities.swift */; };
+		33A0409F218F40A8001E4054 /* Loader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A0409E218F40A8001E4054 /* Loader.swift */; };
+		33A040A1218F40CA001E4054 /* ErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040A0218F40CA001E4054 /* ErrorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		33A04095218F3A77001E4054 /* ContainerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContainerView.swift; sourceTree = "<group>"; };
 		33A04097218F3AA7001E4054 /* PlaceholderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceholderView.swift; sourceTree = "<group>"; };
 		33A0409A218F3B17001E4054 /* UIViewUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewUtilities.swift; sourceTree = "<group>"; };
+		33A0409E218F40A8001E4054 /* Loader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loader.swift; sourceTree = "<group>"; };
+		33A040A0218F40CA001E4054 /* ErrorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +120,8 @@
 		33A04094218F3A44001E4054 /* Custom_Components */ = {
 			isa = PBXGroup;
 			children = (
+				33A0409D218F4052001E4054 /* Loaders */,
+				33A0409C218F4043001E4054 /* ErrorViews */,
 				33A04095218F3A77001E4054 /* ContainerView.swift */,
 				33A04097218F3AA7001E4054 /* PlaceholderView.swift */,
 			);
@@ -128,6 +134,22 @@
 				33A0409A218F3B17001E4054 /* UIViewUtilities.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		33A0409C218F4043001E4054 /* ErrorViews */ = {
+			isa = PBXGroup;
+			children = (
+				33A040A0218F40CA001E4054 /* ErrorView.swift */,
+			);
+			path = ErrorViews;
+			sourceTree = "<group>";
+		};
+		33A0409D218F4052001E4054 /* Loaders */ = {
+			isa = PBXGroup;
+			children = (
+				33A0409E218F40A8001E4054 /* Loader.swift */,
+			);
+			path = Loaders;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +253,11 @@
 				33A04096218F3A77001E4054 /* ContainerView.swift in Sources */,
 				33A04088218F34EE001E4054 /* Middleware.swift in Sources */,
 				33A04087218F34EE001E4054 /* TMMiddleware.swift in Sources */,
+				33A040A1218F40CA001E4054 /* ErrorView.swift in Sources */,
 				33A0409B218F3B17001E4054 /* UIViewUtilities.swift in Sources */,
 				33A04098218F3AA7001E4054 /* PlaceholderView.swift in Sources */,
 				33A04072218F2D92001E4054 /* AppDelegate.swift in Sources */,
+				33A0409F218F40A8001E4054 /* Loader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

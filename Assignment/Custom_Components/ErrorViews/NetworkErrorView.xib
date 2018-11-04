@@ -15,7 +15,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O3N-Yw-bHC">
-                    <rect key="frame" x="40" y="188" width="295" height="291"/>
+                    <rect key="frame" x="40" y="219.5" width="295" height="228"/>
                     <subviews>
                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="error" translatesAutoresizingMaskIntoConstraints="NO" id="lmX-C2-Sn1">
                             <rect key="frame" x="97.5" y="0.0" width="100" height="100"/>
@@ -24,19 +24,34 @@
                                 <constraint firstAttribute="width" secondItem="lmX-C2-Sn1" secondAttribute="height" multiplier="1:1" id="hxP-8J-FYf"/>
                             </constraints>
                         </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwN-RG-8Wn">
-                            <rect key="frame" x="0.0" y="120" width="295" height="105"/>
-                            <string key="text">Looks like the server is taking to long to respond, this can be caused by either poor connectivity or an error with our servers. Please try again in a while.</string>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some Error Occured while fetching Data.Please Try Again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwN-RG-8Wn">
+                            <rect key="frame" x="0.0" y="120" width="295" height="42"/>
                             <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <view contentMode="scaleToFill" placeholderIntrinsicWidth="256" placeholderIntrinsicHeight="44" translatesAutoresizingMaskIntoConstraints="NO" id="RIu-VU-gLt" customClass="UIControl">
-                            <rect key="frame" x="47.5" y="247" width="200" height="44"/>
-                            <color key="backgroundColor" red="0.92941176469999998" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="47.5" y="184" width="200" height="44"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TRY AGAIN!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KkC-ee-fom">
+                                    <rect key="frame" x="50" y="11.5" width="100.5" height="21.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="200" id="BeT-7J-k9U"/>
+                                <constraint firstItem="KkC-ee-fom" firstAttribute="centerX" secondItem="RIu-VU-gLt" secondAttribute="centerX" id="Sbi-eh-9k3"/>
+                                <constraint firstAttribute="height" constant="44" id="Y0U-3J-QEe"/>
+                                <constraint firstItem="KkC-ee-fom" firstAttribute="centerY" secondItem="RIu-VU-gLt" secondAttribute="centerY" id="cCb-Lf-H1q"/>
                             </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                    <integer key="value" value="4"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="tryAgainAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Fka-lb-xmq"/>
                             </connections>

@@ -28,16 +28,16 @@ class PostsVC: BaseViewController {
         contentView.loaderView = contentLoader
         let contentErrorView:NetworkErrorView = .fromNib()
         contentView.errorView = contentErrorView
+        contentErrorView.retryAction = {
+            self.viewModel?.getPostsForNextPage()
+        }
         contentView.willShowContent = {
             self.postsTableView.reloadData()
         }
         viewModel?.postsListPage = self
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
         viewModel?.getPostsForNextPage()
     }
+    
 }
 
 extension PostsVC:UITableViewDataSource,UITableViewDelegate{

@@ -124,6 +124,7 @@
 		33A04070218F2D92001E4054 /* Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				33A040C5218F6277001E4054 /* Constants.swift */,
 				33A040C0218F5B79001E4054 /* ViewControllerFactory.swift */,
 				33A040A6218F4AF9001E4054 /* Posts */,
 				33A04099218F3AC7001E4054 /* Utilities */,
@@ -136,7 +137,6 @@
 				33A04078218F2D94001E4054 /* Assets.xcassets */,
 				33A0407A218F2D94001E4054 /* LaunchScreen.storyboard */,
 				33A0407D218F2D94001E4054 /* Info.plist */,
-				33A040C5218F6277001E4054 /* Constants.swift */,
 			);
 			path = Assignment;
 			sourceTree = "<group>";

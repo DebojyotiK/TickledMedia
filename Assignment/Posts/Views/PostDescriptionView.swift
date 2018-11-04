@@ -52,6 +52,9 @@ class PostDescriptionView: UIView {
     }
     
     private func downloadImage(imageURL:String?) {
+        
+        //Show a placeholder image until the download succeeds
+        self.postImageView.image = UIImage.init(named: "PlaceholderImage")
         let manager = SDWebImageManager.shared()
         imageOperation = manager.loadImage(with: URL.init(string: imageURL!), options: .retryFailed, progress: nil, completed: { (image, data, error, _, _, _) in
             self.postImageView.image = image

@@ -9,7 +9,7 @@
 import UIKit
 
 @objc protocol ErrorView {
-    @objc optional var retryButton:UIView? {get set}
-    @objc optional var cancelButton:UIView? {get set}
+    @objc optional var retryAction:(()->())? {get set}
+    @objc optional var cancelAction:(()->())? {get set}
     @objc optional var error:Error? {get set}
 }

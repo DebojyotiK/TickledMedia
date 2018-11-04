@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import SDWebImage
 
 class PostDescriptionView: UIView {
+    
+    @IBOutlet private weak var postMessageLabel: UILabel!
+    @IBOutlet private weak var postImageView: UIImageView!
+    @IBOutlet private weak var commentsLabel: UILabel!
+    private var imageOperation:SDWebImageOperation?
+    
+    var commentButtonClicked:((UIControl)->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,5 +37,24 @@ class PostDescriptionView: UIView {
     }
     
     func setData(post:UserPostEntity) {
+        postMessageLabel.text = post.message ?? "-"
+        commentsLabel.text = "Comments (\(String(describing: (post.comments?.count)!)))"
+        downloadImage(imageURL: post.image)
+    }
+    
+    @IBAction func commentClickedAction(_ sender: UIControl) {
+        commentButtonClicked?(sender)
+    }
+    
+    func cancelImageDownload() {
+        imageOperation?.cancel()
+        imageOperation = nil
+    }
+    
+    private func downloadImage(imageURL:String?) {
+        let manager = SDWebImageManager.shared()
+        imageOperation = manager.loadImage(with: URL.init(string: imageURL!), options: .retryFailed, progress: nil, completed: { (image, data, error, _, _, _) in
+            self.postImageView.image = image
+        })
     }
 }

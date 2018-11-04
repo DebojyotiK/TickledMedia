@@ -44,12 +44,21 @@ extension PostsVC:UITableViewDataSource,UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let currentPost = (viewModel?.posts![indexPath.row])!
         let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") as! PostCell
-        cell.setData(post: (viewModel?.posts![indexPath.row])!)
+        cell.setData(post: currentPost)
+        cell.postDescriptionView.commentButtonClicked = {(sender) in
+            self.viewModel?.showCommentsForPost(currentPost)
+        }
+        //If last cell is shown then fetch next set of data
+        if indexPath.row == ((viewModel?.posts?.count)! - 1) {
+            self.viewModel?.getPostsForNextPage()
+        }
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
+
 }

@@ -46,8 +46,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let postsViewModel = PostViewModel()
         let postsVC = ViewControllerFactory.postsVC()
         postsVC.viewModel = postsViewModel
-        let postCommentsVC = ViewControllerFactory.postCommentsVC()
-        postCommentsVC.viewModel = postsViewModel
         
         let navigationController = UINavigationController.init(rootViewController: postsVC)
         navigationController.isNavigationBarHidden = true

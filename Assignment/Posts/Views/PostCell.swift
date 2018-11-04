@@ -9,10 +9,18 @@
 import UIKit
 
 class PostCell: UITableViewCell {
-
+    
     @IBOutlet weak var postDescriptionView: PostDescriptionView!
     
     func setData(post:UserPostEntity) {
         postDescriptionView.setData(post: post)
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        postDescriptionView.cancelImageDownload()
+    }
+    
+    
+
 }

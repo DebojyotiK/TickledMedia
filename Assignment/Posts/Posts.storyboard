@@ -48,7 +48,7 @@
                                             </constraints>
                                         </view>
                                         <prototypes>
-                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="postCell" rowHeight="234" id="jKJ-BW-K9T" customClass="PostCell" customModule="Assignment" customModuleProvider="target">
+                                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="postCell" rowHeight="234" id="jKJ-BW-K9T" customClass="PostCell" customModule="Assignment" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="28" width="375" height="234"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="jKJ-BW-K9T" id="ppe-dB-I6Q">
@@ -56,16 +56,16 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSN-vI-h0y" customClass="PostDescriptionView" customModule="Assignment" customModuleProvider="target">
-                                                            <rect key="frame" x="12" y="12" width="351" height="210"/>
+                                                            <rect key="frame" x="16" y="16" width="343" height="206"/>
                                                             <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </view>
                                                     </subviews>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="trailing" secondItem="zSN-vI-h0y" secondAttribute="trailing" constant="12" id="Clh-bc-VWY"/>
-                                                        <constraint firstItem="zSN-vI-h0y" firstAttribute="leading" secondItem="ppe-dB-I6Q" secondAttribute="leading" constant="12" id="DW6-Uo-hql"/>
+                                                        <constraint firstAttribute="trailing" secondItem="zSN-vI-h0y" secondAttribute="trailing" constant="16" id="Clh-bc-VWY"/>
+                                                        <constraint firstItem="zSN-vI-h0y" firstAttribute="leading" secondItem="ppe-dB-I6Q" secondAttribute="leading" constant="16" id="DW6-Uo-hql"/>
                                                         <constraint firstAttribute="bottom" secondItem="zSN-vI-h0y" secondAttribute="bottom" constant="12" id="IbM-pp-SLa"/>
-                                                        <constraint firstItem="zSN-vI-h0y" firstAttribute="top" secondItem="ppe-dB-I6Q" secondAttribute="top" constant="12" id="JGU-ox-Dlt"/>
+                                                        <constraint firstItem="zSN-vI-h0y" firstAttribute="top" secondItem="ppe-dB-I6Q" secondAttribute="top" constant="16" id="JGU-ox-Dlt"/>
                                                     </constraints>
                                                 </tableViewCellContentView>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

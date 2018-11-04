@@ -9,32 +9,70 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostDescriptionView" customModule="Assignment" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PostDescriptionView" customModule="Assignment" customModuleProvider="target">
+            <connections>
+                <outlet property="commentsLabel" destination="IjA-Bw-rjK" id="pj1-ZH-lyc"/>
+                <outlet property="postImageView" destination="by4-aO-d7N" id="bBW-L1-HXp"/>
+                <outlet property="postMessageLabel" destination="UZQ-0F-enk" id="L6o-wa-YYJ"/>
+            </connections>
+        </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="375" height="277"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="by4-aO-d7N">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="140"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="140" id="Tig-Qe-jxI"/>
+                        <constraint firstAttribute="height" constant="180" id="Tig-Qe-jxI"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Description" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZQ-0F-enk">
-                    <rect key="frame" x="12" y="152" width="351" height="125"/>
-                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Message Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZQ-0F-enk">
+                    <rect key="frame" x="12" y="192" width="351" height="31"/>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a14-X6-n0t" customClass="UIControl">
+                    <rect key="frame" x="12" y="235" width="97" height="30"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="chat" translatesAutoresizingMaskIntoConstraints="NO" id="5XJ-Zl-Rlp">
+                            <rect key="frame" x="0.0" y="5" width="20" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="20" id="W2T-tD-QrL"/>
+                                <constraint firstAttribute="width" secondItem="5XJ-Zl-Rlp" secondAttribute="height" id="oWa-VI-NLx"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Comments" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IjA-Bw-rjK">
+                            <rect key="frame" x="28" y="7" width="69" height="16.5"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                            <color key="textColor" red="0.0" green="0.44456183854808007" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="IjA-Bw-rjK" firstAttribute="centerY" secondItem="5XJ-Zl-Rlp" secondAttribute="centerY" id="8Xm-B5-7I5"/>
+                        <constraint firstAttribute="trailing" secondItem="IjA-Bw-rjK" secondAttribute="trailing" id="GE4-WE-Y29"/>
+                        <constraint firstAttribute="height" constant="30" id="R0p-vb-9ez"/>
+                        <constraint firstItem="IjA-Bw-rjK" firstAttribute="leading" secondItem="5XJ-Zl-Rlp" secondAttribute="trailing" constant="8" id="URz-2x-mY9"/>
+                        <constraint firstItem="5XJ-Zl-Rlp" firstAttribute="centerY" secondItem="a14-X6-n0t" secondAttribute="centerY" id="Vy2-h3-NuA"/>
+                        <constraint firstItem="5XJ-Zl-Rlp" firstAttribute="leading" secondItem="a14-X6-n0t" secondAttribute="leading" id="rJN-wh-Sv5"/>
+                    </constraints>
+                    <connections>
+                        <action selector="commentClickedAction:" destination="-1" eventType="touchUpInside" id="I0I-ZJ-Kkk"/>
+                    </connections>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="UZQ-0F-enk" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="12" id="517-hc-JSh"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="UZQ-0F-enk" secondAttribute="trailing" constant="12" id="A9H-OA-ygS"/>
+                <constraint firstItem="a14-X6-n0t" firstAttribute="top" secondItem="UZQ-0F-enk" secondAttribute="bottom" constant="12" id="EDN-hQ-Ghf"/>
+                <constraint firstAttribute="bottom" secondItem="a14-X6-n0t" secondAttribute="bottom" constant="12" id="G5x-ON-FE4"/>
                 <constraint firstItem="UZQ-0F-enk" firstAttribute="top" secondItem="by4-aO-d7N" secondAttribute="bottom" constant="12" id="LO3-kV-Hh5"/>
                 <constraint firstItem="by4-aO-d7N" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="dJ9-Ul-xnt"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="UZQ-0F-enk" secondAttribute="bottom" id="eZJ-Ym-pfO"/>
+                <constraint firstItem="a14-X6-n0t" firstAttribute="leading" secondItem="UZQ-0F-enk" secondAttribute="leading" id="oeo-8p-U8e"/>
                 <constraint firstItem="by4-aO-d7N" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="tdW-Lr-HJI"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="by4-aO-d7N" secondAttribute="trailing" id="vjW-H7-fkH"/>
             </constraints>
@@ -43,4 +81,7 @@
             <point key="canvasLocation" x="116" y="216.34182908545728"/>
         </view>
     </objects>
+    <resources>
+        <image name="chat" width="46.428211212158203" height="46.428211212158203"/>
+    </resources>
 </document>

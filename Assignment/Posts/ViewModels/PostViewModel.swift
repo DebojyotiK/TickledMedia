@@ -11,7 +11,7 @@ import Alamofire
 import ObjectMapper
 
 class PostViewModel: NSObject {
-    
+
     private(set) var posts:[UserPostEntity]?
     private var wrapper = Wrappers.TickledMedia()
     private var isPostFetchingInProgress:Bool = false
@@ -24,7 +24,7 @@ class PostViewModel: NSObject {
         if isPostFetchingInProgress == false{
             //If there are no posts in the table show the content loader.
             //Else show the bottom Loader
-            if posts != nil || posts?.count == 0 {
+            if posts == nil || posts?.count == 0 {
                 postsListPage?.contentView.state = .ShowLoader
             }
             else{
@@ -66,6 +66,12 @@ class PostViewModel: NSObject {
     
     func cancelPostFetching() {
         postFetchRequest?.cancel()
+    }
+    
+    func showCommentsForPost(_ post:UserPostEntity) {
+        let postCommentsVC = ViewControllerFactory.postCommentsVC()
+        postCommentsVC.viewModel = self
+        self.postsListPage?.present(postCommentsVC, animated: true, completion: nil)
     }
     
 }

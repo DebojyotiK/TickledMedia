@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol Loader {
-    func showLoader()
-    func hideLoader()
+@objc protocol Loader {
+    @objc optional func showLoader()
+    @objc optional func hideLoader()
 }

@@ -18,6 +18,13 @@ class BaseViewController: UIViewController {
     func setNavigationBar(_ navigationBar:NavigationBar,handleNavigationBar:Bool=true) {
         _navigationBar = navigationBar
         _handleNavigationBar = handleNavigationBar
+        if navigationController != nil{
+            _navigationBar?.backButton?.isHidden =  ((self.navigationController?.viewControllers.count)! <= 1)
+        }
+        else{
+            _navigationBar?.backButton?.isHidden = true
+        }
+        
         self.initializeVC()
     }
     

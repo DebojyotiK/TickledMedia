@@ -41,6 +41,10 @@
 		33A040C6218F6277001E4054 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040C5218F6277001E4054 /* Constants.swift */; };
 		33A040C8218F6B4E001E4054 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040C7218F6B4E001E4054 /* PostCell.swift */; };
 		33A040C9218F779A001E4054 /* TMNavigationBar.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A040B8218F5120001E4054 /* TMNavigationBar.xib */; };
+		33A040CB218F8F56001E4054 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040CA218F8F56001E4054 /* CommentCell.swift */; };
+		33A040CD218F9227001E4054 /* ContentLoader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33A040CC218F9227001E4054 /* ContentLoader.xib */; };
+		33A040CF218F923C001E4054 /* ContentLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040CE218F923C001E4054 /* ContentLoader.swift */; };
+		33A040D1218F9788001E4054 /* PaginationLoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33A040D0218F9788001E4054 /* PaginationLoaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -80,6 +84,10 @@
 		33A040C3218F617F001E4054 /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
 		33A040C5218F6277001E4054 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		33A040C7218F6B4E001E4054 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		33A040CA218F8F56001E4054 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
+		33A040CC218F9227001E4054 /* ContentLoader.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContentLoader.xib; sourceTree = "<group>"; };
+		33A040CE218F923C001E4054 /* ContentLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentLoader.swift; sourceTree = "<group>"; };
+		33A040D0218F9788001E4054 /* PaginationLoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaginationLoaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				33A0409E218F40A8001E4054 /* Loader.swift */,
+				33A040CC218F9227001E4054 /* ContentLoader.xib */,
+				33A040CE218F923C001E4054 /* ContentLoader.swift */,
 			);
 			path = Loaders;
 			sourceTree = "<group>";
@@ -222,6 +232,8 @@
 				33A040AE218F4DEF001E4054 /* PostDescriptionView.xib */,
 				33A040B0218F4E12001E4054 /* PostDescriptionView.swift */,
 				33A040C7218F6B4E001E4054 /* PostCell.swift */,
+				33A040CA218F8F56001E4054 /* CommentCell.swift */,
+				33A040D0218F9788001E4054 /* PaginationLoaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -306,6 +318,7 @@
 				33A040C9218F779A001E4054 /* TMNavigationBar.xib in Resources */,
 				33A040A8218F4B24001E4054 /* Posts.storyboard in Resources */,
 				33A0407C218F2D94001E4054 /* LaunchScreen.storyboard in Resources */,
+				33A040CD218F9227001E4054 /* ContentLoader.xib in Resources */,
 				33A040AF218F4DEF001E4054 /* PostDescriptionView.xib in Resources */,
 				33A04079218F2D94001E4054 /* Assets.xcassets in Resources */,
 				33A04077218F2D92001E4054 /* Main.storyboard in Resources */,
@@ -346,6 +359,7 @@
 				33A040AD218F4C46001E4054 /* BaseViewController.swift in Sources */,
 				33A040C6218F6277001E4054 /* Constants.swift in Sources */,
 				33A040C1218F5B79001E4054 /* ViewControllerFactory.swift in Sources */,
+				33A040D1218F9788001E4054 /* PaginationLoaderView.swift in Sources */,
 				33A040B1218F4E12001E4054 /* PostDescriptionView.swift in Sources */,
 				33A040BD218F5B0E001E4054 /* PostsVC.swift in Sources */,
 				33A040BB218F516A001E4054 /* TMNavigationBar.swift in Sources */,
@@ -364,8 +378,10 @@
 				33A0409F218F40A8001E4054 /* Loader.swift in Sources */,
 				33A040B7218F4F00001E4054 /* CommentEntity.swift in Sources */,
 				33A040AB218F4C15001E4054 /* NavigationBar.swift in Sources */,
+				33A040CF218F923C001E4054 /* ContentLoader.swift in Sources */,
 				33A040C8218F6B4E001E4054 /* PostCell.swift in Sources */,
 				33A040BF218F5B39001E4054 /* PostCommentsVC.swift in Sources */,
+				33A040CB218F8F56001E4054 /* CommentCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

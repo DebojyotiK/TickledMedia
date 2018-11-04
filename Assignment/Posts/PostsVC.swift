@@ -13,6 +13,7 @@ class PostsVC: BaseViewController {
     @IBOutlet weak var navigationBar: TMNavigationBar!
     @IBOutlet weak var contentView: ContainerView!
     @IBOutlet weak var postsTableView: UITableView!
+    @IBOutlet weak var paginationLoader: PaginationLoaderView!
     var viewModel:PostViewModel?
     
     override func viewDidLoad() {
@@ -23,6 +24,8 @@ class PostsVC: BaseViewController {
     func initializeVC()  {
 
         self.setNavigationBar(navigationBar)
+        let contentLoader:ContentLoader = .fromNib()
+        contentView.loaderView = contentLoader
         let contentErrorView:NetworkErrorView = .fromNib()
         contentView.errorView = contentErrorView
         contentView.willShowContent = {
@@ -50,11 +53,17 @@ extension PostsVC:UITableViewDataSource,UITableViewDelegate{
         cell.postDescriptionView.commentButtonClicked = {(sender) in
             self.viewModel?.showCommentsForPost(currentPost)
         }
-        //If last cell is shown then fetch next set of data
-        if indexPath.row == ((viewModel?.posts?.count)! - 1) {
-            self.viewModel?.getPostsForNextPage()
-        }
+        
         return cell
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.isDragging {
+            if ((scrollView.contentOffset.y + scrollView.frame.size.height) >= scrollView.contentSize.height)
+            {
+                self.viewModel?.getPostsForNextPage()
+            }
+        }
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

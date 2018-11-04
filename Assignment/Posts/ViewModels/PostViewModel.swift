@@ -22,13 +22,15 @@ class PostViewModel: NSObject {
     func getPostsForNextPage()  {
         
         if isPostFetchingInProgress == false{
+            
+            self.isPostFetchingInProgress = true
             //If there are no posts in the table show the content loader.
             //Else show the bottom Loader
             if posts == nil || posts?.count == 0 {
                 postsListPage?.contentView.state = .ShowLoader
             }
             else{
-                
+                postsListPage?.paginationLoader.showLoader()
             }
             postFetchRequest = wrapper.GET(relURL: WSEndpoints.Post_Resources.posts,
                                            queryParams: nil,
@@ -38,6 +40,7 @@ class PostViewModel: NSObject {
                                                 try self.mapPosts(response: response)
                                                 self.isPostFetchingInProgress = false
                                                 self.postsListPage?.contentView.state = .ShowContent
+                                                self.postsListPage?.paginationLoader.hideLoader()
                                             }
                                             catch{
                                                 
@@ -56,7 +59,8 @@ class PostViewModel: NSObject {
     private func showCouldNotFetchPostError(){
         
         self.isPostFetchingInProgress = false
-        if self.posts != nil || self.posts?.count == 0 {
+        postsListPage?.paginationLoader.hideLoader()
+        if self.posts == nil || self.posts?.count == 0 {
             self.postsListPage?.contentView.state = .ShowError
         }
         else{
@@ -71,6 +75,7 @@ class PostViewModel: NSObject {
     func showCommentsForPost(_ post:UserPostEntity) {
         let postCommentsVC = ViewControllerFactory.postCommentsVC()
         postCommentsVC.viewModel = self
+        postCommentsVC.post = post
         self.postsListPage?.present(postCommentsVC, animated: true, completion: nil)
     }
     
